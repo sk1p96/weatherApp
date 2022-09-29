@@ -1,0 +1,23 @@
+// Color vars
+
+// Size screen
+
+$xs: 575px
+$sm: 768px
+$md: 991px
+$lg: 1199px
+
+// vars
+
+$radius: 5px
+
+html, body, ul, li, p, div, form,h1
+    margin: 0
+    padding: 0
+
+$maxWidth: 1920
+
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
