@@ -1,0 +1,35 @@
+.sidebar 
+    // background: red
+    // height: 100%
+    border-right: 1px solid rgba($black, .02)
+    padding: 40px 20px
+    &__link
+        font-size: 20px
+        font-weight: 600
+        color: $blue-dark
+        text-decoration: none
+        display: flex
+        align-items: center
+        gap: 10px
+        svg
+            background: $blue-dark
+            color: $white
+            border-radius: 50%
+
+
+.nav
+    margin-top: 40px
+    &__item
+        display: flex
+        gap: 15px
+        align-items: center
+        padding: 12px 10px  
+        margin: 10px 0
+        width: 100%
+        border-radius: $radius
+        transition: all .2s
+        font-size: 16px
+        &:hover
+            background: lighten($blue-light, 4)
+            color: $blue-dark
+            transition: all .2s

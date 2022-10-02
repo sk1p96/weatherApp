@@ -4,18 +4,24 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(href="css/style.min.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
 
         include blocks/head
     body
-        //- include blocks/header/header
+        
+        .wrapper
+            include blocks/sidebar/sidebar
+            .container
+                include blocks/header/header
+                include blocks/weather/weather
 
-        form(action="" class="form")
-            input(type="search" name="search" class="search" required)
-            //- input(type="submit" value="submit" class="submit")
+                //- form(action="" class="form")
+                //-     input(type="search" name="search" class="search" required)
+                //-     //- input(type="submit" value="submit" class="submit")
 
-        .weather
-            h2 
 
-        //- include blocks/footer/footer
+                include blocks/footer/footer
 
     script(src="js/app.min.js")

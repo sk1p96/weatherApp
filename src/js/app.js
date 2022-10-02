@@ -9,7 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
         weatherTemp = document.querySelector('.weather'),
         search = document.querySelector('.search'),
         form = document.querySelector('.form'),
-        submit = document.querySelector('.submit');
+        btnPrev = document.querySelector('.slider__prev'),
+        btnNext = document.querySelector('.slider__next'),
+        slider = document.querySelector('.slider');
+
+    // slider
+
+    slider.addEventListener('click', (e) => {
+        console.log(e)
+    });
+
 
     let city = 'Тюмень';
 
@@ -23,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function getWeather() {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${apiKey}`);
         const data = await response.json();
+        console.log(data)
         return data;
     }
 
@@ -30,9 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.geolocation.getCurrentPosition(async(pos) => {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?&lang=ru&lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=${apiKey}`);
             const data = await response.json();
-            console.log(data)
             return data;
-        })
+        });
     }
 
     getCoordsWeather()

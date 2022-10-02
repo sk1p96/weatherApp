@@ -1,0 +1,37 @@
+.weather-card
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px
+    &_overview
+        margin-top: 40px !important
+    &__item
+        display: flex
+        gap: 20px
+        align-items: center
+        border-radius: $radius
+        border: 1px solid $blue-light
+        padding: 15px
+        transition: all .5s
+        &:hover
+            box-shadow: 4px 4px 4px -3px rgba($black, .05)
+            transition: all .5s
+        &_prediction
+            gap: 10px
+            cursor: pointer
+            &.active
+                border: 1px solid $blue
+                background: $gray
+    &__icon
+        background: $gray
+        color: $blue
+        padding: 10px
+        border-radius: 50%
+    &__subtitle
+        font-size: 14px
+        color: rgba($black , .6)
+    &__title
+        font-size: 22px
+        font-weight: 500
+        margin-top: 7px
+        &_prediction
+            font-size: 18px

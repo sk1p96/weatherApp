@@ -1,0 +1,15 @@
+.search
+    width: 35%
+    &__input
+        background: darken($gray, 0)
+        padding: 15px 10px
+        width: 100%
+        outline: none
+        border: 1px solid darken($gray, 0)
+        border-radius: $radius
+        transition: all .5s 
+        &:focus
+            border: 1px solid lighten($blue, 10)
+            background: darken($gray, .5)
+            transition: all .5s 
+            box-shadow: 4px 4px 4px -3px rgba($black, .05)

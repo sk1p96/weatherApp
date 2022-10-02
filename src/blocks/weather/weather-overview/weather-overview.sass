@@ -1,0 +1,30 @@
+.weather-overview
+    display: flex
+    gap: 20px
+    &-temp
+        background: $blue-light
+        width: 40%
+        padding: 20px
+        border-radius: $radius
+        &__header
+            display: flex
+            justify-content: space-between
+        &__value-wrapper
+            text-align: center
+            margin: 40px 0
+        &__temp-value
+            font-size: 60px
+            font-weight: 600
+        &__status
+            color: rgba($black, .8)
+        &__city
+            display: flex
+            gap: 5px
+            align-items: center
+            color: $blue-dark
+    &-detail
+        width: 60%
+        &__header
+            display: flex
+            justify-content: space-between
+            align-items: center

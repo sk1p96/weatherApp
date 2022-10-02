@@ -2,9 +2,35 @@
 @import 'vars'
 @import '../blocks/header/header'
 @import '../blocks/footer/footer'
+@import '../blocks/search/search'
+@import '../blocks/weather/weather'
+@import '../blocks/slider/slider'
+@import '../blocks/sidebar/sidebar'
+@import '../blocks/weather/weather-overview/weather-overview'
+@import '../blocks/weather/weather-prediction/weather-prediction'
+@import '../blocks/weather/weather-card/weather-card'
 
 
 body
     font-family: 'Roboto', sans-serif
-    overflow-x: hidden
-    margin: 50px
+
+.wrapper
+    display: grid
+    grid-template-columns: 20% 1fr
+    gap: 40px
+    padding: 0 18%
+    height: 100vh
+
+.container
+    padding-top: 40px
+
+.btn
+    border: 0
+    outline: 0
+    background: $white
+    cursor: pointer
+
+.small-header
+    font-weight: 600
+    font-size: 18px
+
